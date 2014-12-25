@@ -1,0 +1,7 @@
+name: renrenrp
+version: 1
+cron:
+    - description: refresh renren rp every 31 mins
+      url: /
+      schedule: every 31 mins
+      timezone: Beijing

@@ -1,0 +1,15 @@
+name: renrenrp
+version: 2
+libraries:
+    - name: "django"
+      version: "1.4"
+handlers:
+    - url: /static/
+      static_path: static
+cron:
+    - description: refresh renren rp every 31 mins
+      url: fresh/
+      schedule: every 31 mins
+    - description: clear fresh rp log every day at 00:00
+      url: clearLog/
+      schedule: every day of month 00:00
