@@ -33,9 +33,9 @@ def login_renren(username, password):
     # urlopen (url [,data ,[timeout]]), url可以为url地址，也可以是Request对象
     try:
         html = urllib2.urlopen(req).read()
-        if '新鲜事读取中...' in html:
-            return 'Success'
+        if '请输入密码' in html:
+            return 'Fail'
         else:
-            return html
+            return 'Success'
     except Exception as e:
         return e
